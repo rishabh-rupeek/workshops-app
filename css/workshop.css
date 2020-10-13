@@ -1,42 +1,68 @@
-.navbar{
-    width: 100%;
+.navbar {
     height: 40px;
-    background-color: orange;
+    background-color: navy; /* background-* properties - please explore, also background shorthand property */
 }
 
-.card .card-content{
-    padding: 10px;
-    border-radius: 2px;
-    border: gray solid 2px;
-}
-
-.card-row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.card-col{
-    flex-basis: 30%;
-}
-
-.nav{
+.nav, .list-unstyled {
+    list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.nav ul{
-    text-align: center;
-    align-content: center
-}
-
-.nav li{
-    color: white;
+.nav li {
     display: inline;
-    padding: 5px 10px;
 }
 
-.workshop-image{
-    width: 200px;
-    height: 100px;
+.nav a {
+    padding: 5px 10px;
+    color: white;
+    line-height: 40px;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: rgb( 255, 255, 255 );
+    background-color: darkgray;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.img-fluid {
+    width: 100%;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid darkgray;
+    border-radius: 4px;
+}
+
+.text-center {
+    text-align: center !important; /* set this property to this value at any cost */
+}
+
+.my-3 {
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+}
+
+.row {
+    /* this is a flexbox parent element */
+    display: flex;
+    flex-direction: row; /* arrange children rowwise, i.e. horizontally */ 
+    flex-wrap: wrap; /* allow children to wrap to next lines instead of overflowing on 1 line */
+    justify-content: space-between; /* extra space on a line is spread between items on the line */
+    align-items: stretch; /* stretch each item on a line to occupy entire height of the line */
+}
+
+.col {
+    flex-basis: 30%; /* like width for flexbox */
+    
+    /* tis is also made a flexbox parent to have the card stretch to full height using align-items */
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
 }
